@@ -5,7 +5,6 @@ class PostsCreator
   end
 
   def create
-  	byebug
     post = Post.create!(title: @title, content: @content)
 
     ActiveCable.server.broadcast(
